@@ -1,6 +1,6 @@
 export const TopBar = () => {
   return (
-    <div id="topbar" className="d-flex align-items-center" style={{height:"40px"}}>
+    <div id="topbar" className="fixed-top d-flex align-items-center" style={{height:"40px"}}>
       <div className="container d-flex justify-content-between">
         <div className="contact-info d-flex align-items-center">
           <i className="bi bi-envelope"></i>{" "}
