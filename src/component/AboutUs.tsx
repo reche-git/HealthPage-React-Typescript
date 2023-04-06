@@ -9,7 +9,7 @@ const AboutUs = () => {
               className="play-btn mb-4"
             ></a> */}
             <iframe
-              style={{ marginTop: "4rem" }}
+              style={{ marginTop: "3.8rem" }}
               width="853"
               height="480"
               src="https://www.youtube.com/embed/eMobkagZu64"
@@ -20,7 +20,7 @@ const AboutUs = () => {
 
           <div className="col-xl-7 col-lg-6 icon-boxes d-flex flex-column align-items-stretch justify-content-center py-5 px-lg-5">
             <h3>
-              A pokémon friendly and ecological organization to make the planet
+              A Pokémon friendly and ecological organization to make the planet
               a better place.
             </h3>
             <p>
@@ -38,7 +38,7 @@ const AboutUs = () => {
                 <a href="">World recognition</a>
               </h4>
               <p className="description">
-                Being recognized as a Pokemon center by 12 global health
+                Being recognized as a Pokémon center by 12 global health
                 organizations, PokeCare is a pioneer in global relationships
                 with personalised medical treatment plans recognized in 124
                 countries.
@@ -47,27 +47,30 @@ const AboutUs = () => {
 
             <div className="icon-box">
               <div className="icon">
-                <i className="bx bx-gift"></i>
+                <i className="bi bi-house-heart"></i>
               </div>
               <h4 className="title">
-                <a href="">Nemo Enim</a>
+                <a href="">Care plan</a>
               </h4>
               <p className="description">
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque
+                All our sucursals provide the same health plan for Pokémons.
+                This is in order to continue the treatment of a Pokémon even if
+                you are traveling for a competition.
               </p>
             </div>
 
             <div className="icon-box">
               <div className="icon">
-                <i className="bx bx-atom"></i>
+                <i className="bi bi-gear"></i>
               </div>
               <h4 className="title">
-                <a href="">Dine Pad</a>
+                <a href="">State of the art technology</a>
               </h4>
               <p className="description">
-                Explicabo est voluptatum asperiores consequatur magnam. Et
-                veritatis odit. Sunt aut deserunt minus aut eligendi omnis
+                Tanks to governments foundings, the PokeCare center is integrated with
+                state of the art technology for Pokémons with each center
+                specialized, but not limited to, the Pokémon types of their
+                area.
               </p>
             </div>
           </div>
