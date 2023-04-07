@@ -5,6 +5,7 @@ import { TopBar } from "./component/TopBar";
 import AboutUs from "./component/AboutUs";
 import Counter from "./component/Counter";
 import Services from "./component/Services";
+import ContactForm from "./component/ContactForm";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <AboutUs />
       <Counter />
       <Services />
+      <ContactForm />
     </div>
   );
 }

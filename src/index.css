@@ -121,11 +121,11 @@ h6 {
 }
 
 #topbar .contact-info a:hover {
-  color: #1977cc;
+  color: #f8587d;
 }
 
 #topbar .contact-info i {
-  color: #1977cc;
+  color: #f8587d;
   padding-right: 4px;
   margin-left: 15px;
   line-height: 0;
@@ -136,7 +136,7 @@ h6 {
 }
 
 #topbar .social-links a {
-  color: #437099;
+  color: #f8587d;
   padding-left: 15px;
   display: inline-block;
   line-height: 1px;
@@ -144,7 +144,7 @@ h6 {
 }
 
 #topbar .social-links a:hover {
-  color: #1977cc;
+  color: #000000;
 }
 
 #topbar .social-links a:first-child {
@@ -180,7 +180,7 @@ button:active {
 }
 
 #header .logo a {
-  color: #2c4964;
+  color: #f8587d;
 }
 
 /**
@@ -209,10 +209,6 @@ button:active {
     padding: 6px 18px;
   }
 }
-
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # home Section
@@ -713,15 +709,25 @@ h2::after {
 /*--------------------------------------------------------------
 # Appointments
 --------------------------------------------------------------*/
-.appointment .php-email-form {
+.appointment {
+  background: url("./assets/nurses-fullBody.png") top center,
+    linear-gradient(
+      148deg,
+      rgba(252, 87, 126, 1) 1%,
+      rgba(255, 124, 155, 1) 29%,
+      rgba(255, 182, 199, 1) 68%
+    );
+}
+
+.appointment .email-form {
   width: 100%;
 }
 
-.appointment .php-email-form .form-group {
+.appointment .email-form .form-group {
   padding-bottom: 8px;
 }
 
-.appointment .php-email-form .validate {
+.appointment .email-form .validate {
   display: none;
   color: red;
   margin: 0 0 15px 0;
@@ -729,7 +735,7 @@ h2::after {
   font-size: 13px;
 }
 
-.appointment .php-email-form .error-message {
+.appointment .email-form .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -738,11 +744,11 @@ h2::after {
   font-weight: 600;
 }
 
-.appointment .php-email-form .error-message br + br {
+.appointment .email-form .error-message br + br {
   margin-top: 25px;
 }
 
-.appointment .php-email-form .sent-message {
+.appointment .email-form .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -751,14 +757,14 @@ h2::after {
   font-weight: 600;
 }
 
-.appointment .php-email-form .loading {
+.appointment .email-form .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
 
-.appointment .php-email-form .loading:before {
+.appointment .email-form .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -770,32 +776,32 @@ h2::after {
   animation: animate-loading 1s linear infinite;
 }
 
-.appointment .php-email-form input,
-.appointment .php-email-form textarea,
-.appointment .php-email-form select {
+.appointment .email-form input,
+.appointment .email-form textarea,
+.appointment .email-form select {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
   padding: 10px !important;
 }
 
-.appointment .php-email-form input:focus,
-.appointment .php-email-form textarea:focus,
-.appointment .php-email-form select:focus {
-  border-color: #1977cc;
+.appointment .email-form input:focus,
+.appointment .email-form textarea:focus,
+.appointment .email-form select:focus {
+  border-color: #f8587d;
 }
 
-.appointment .php-email-form input,
-.appointment .php-email-form select {
+.appointment .email-form input,
+.appointment .email-form select {
   height: 44px;
 }
 
-.appointment .php-email-form textarea {
+.appointment .email-form textarea {
   padding: 10px 12px;
 }
 
-.appointment .php-email-form button[type="submit"] {
-  background: #1977cc;
+.appointment .email-form button[type="submit"] {
+  background: #f8587d;
   border: 0;
   padding: 10px 35px;
   color: #fff;
@@ -803,8 +809,8 @@ h2::after {
   border-radius: 50px;
 }
 
-.appointment .php-email-form button[type="submit"]:hover {
-  background: #1c84e3;
+.appointment .email-form button[type="submit"]:hover {
+  background: #fa3c69;
 }
 
 /*--------------------------------------------------------------
