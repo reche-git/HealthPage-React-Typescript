@@ -7,7 +7,7 @@ export const TopBar = () => {
           <a href="mailto:alanaxelreche@hotmail.com">
             alanaxelreche@hotmail.com
           </a>
-          <i className="bi bi-phone"></i> +1 5589 55488 55
+          <i className="bi bi-phone"></i> +11 5589 554
         </div>
         <div className="d-none d-lg-flex social-links align-items-center">
           <a

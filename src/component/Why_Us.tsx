@@ -37,7 +37,7 @@ export const Why_Us = () => {
                   <div className="col-xl-4 d-flex align-items-stretch">
                     <div className="icon-box mt-4 mt-xl-0">
                       <i className="bi bi-bookmark-heart"></i>{" "}
-                      <h4>Bast numbers of Doctors</h4>
+                      <h4>Bast number of Doctors</h4>
                       <p>
                         Our doctors have a vast experience in heavy duty surgery
                         and creating adaptable recuperation plans.
