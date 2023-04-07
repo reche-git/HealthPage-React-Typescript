@@ -5,17 +5,17 @@ const ContactForm = () => {
         <div className="section-title">
           <h2>Make an Appointment</h2>
           <p>
-            Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex
-            aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos
-            quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia
-            fugiat sit in iste officiis commodi quidem hic quas.
+            Our 24hs customer service will contact you as soon as possible.
+            Remember to add the type of Pókemon, race, gender, and any other
+            critical information to help us giving you the most accurate
+            response.
           </p>
         </div>
 
         <form
-        //   action="forms/appointment.php"
-        //   method="post"
-        //   role="form"
+          //   action="forms/appointment.php"
+          //   method="post"
+          //   role="form"
           className="email-form"
         >
           <div className="row">
