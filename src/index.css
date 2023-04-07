@@ -7,12 +7,12 @@ body {
 }
 
 a {
-  color: #1977cc;
+  color: #fa3c69;
   text-decoration: none;
 }
 
 a:hover {
-  color: #3291e6;
+  color: #fa3c69;
   text-decoration: none;
 }
 
@@ -72,7 +72,7 @@ h6 {
   right: 15px;
   bottom: 15px;
   z-index: 996;
-  background: #1977cc;
+  background: #fa3c69;
   width: 40px;
   height: 40px;
   border-radius: 4px;
@@ -623,9 +623,19 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.services .section-title h2,
+h2::before,
+h2::after {
+  color: #fa3c69;
+}
+
+.services .section-title h2::after {
+  background-color: #fa3c69;
+}
+
 .services .icon-box {
   text-align: center;
-  border: 1px solid #d5e1ed;
+  border: 1px solid #edd5eb;
   padding: 80px 20px;
   transition: all ease-in-out 0.3s;
 }
@@ -634,7 +644,7 @@ section {
   margin: 0 auto;
   width: 64px;
   height: 64px;
-  background: #1977cc;
+  background: #f8587d;
   border-radius: 5px;
   transition: all 0.3s ease-out 0s;
   display: flex;
@@ -656,7 +666,7 @@ section {
   top: -8px;
   height: 100%;
   width: 100%;
-  background: #badaf7;
+  background: #ecb9c5;
   border-radius: 5px;
   transition: all 0.3s ease-out 0s;
   transform: translateZ(-1px);
@@ -669,7 +679,7 @@ section {
 }
 
 .services .icon-box h4 a {
-  color: #2c4964;
+  color: #be5a72;
 }
 
 .services .icon-box p {
@@ -679,8 +689,8 @@ section {
 }
 
 .services .icon-box:hover {
-  background: #1977cc;
-  border-color: #1977cc;
+  background: #f8587d;
+  border-color: #f8587d;
 }
 
 .services .icon-box:hover .icon {
@@ -688,11 +698,11 @@ section {
 }
 
 .services .icon-box:hover .icon i {
-  color: #1977cc;
+  color: #f8587d;
 }
 
 .services .icon-box:hover .icon::before {
-  background: #3291e6;
+  background: #f5809b;
 }
 
 .services .icon-box:hover h4 a,

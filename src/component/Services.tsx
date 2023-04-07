@@ -16,14 +16,14 @@ const Services = () => {
           <div className="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div className="icon-box">
               <div className="icon">
-                <i className="fas fa-heartbeat"></i>
+                <i className="bi bi-heart-pulse"></i>
               </div>
               <h4>
-                <a href="">Lorem Ipsum</a>
+                <a href="">First Aid</a>
               </h4>
               <p>
-                Voluptatum deleniti atque corrupti quos dolores et quas
-                molestias excepturi
+                We provide all the necessary treatments for your Pokémons in our
+                urgency aisle.
               </p>
             </div>
           </div>
@@ -31,14 +31,14 @@ const Services = () => {
           <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
             <div className="icon-box">
               <div className="icon">
-                <i className="fas fa-pills"></i>
+                <i className="bi bi-capsule"></i>
               </div>
               <h4>
-                <a href="">Sed ut perspiciatis</a>
+                <a href="">Medicine Prescription</a>
               </h4>
               <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore
+                Our drug stores are equipped for all common and uncommon Pokémon
+                diseases.
               </p>
             </div>
           </div>
@@ -46,14 +46,14 @@ const Services = () => {
           <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
             <div className="icon-box">
               <div className="icon">
-                <i className="fas fa-hospital-user"></i>
+                <i className="bi bi-postcard-heart"></i>
               </div>
               <h4>
-                <a href="">Magni Dolores</a>
+                <a href="">Specialized doctors</a>
               </h4>
               <p>
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                qui officia
+                Every urgent care and surgery procedure is performed by PhD
+                professionals.
               </p>
             </div>
           </div>
@@ -61,14 +61,13 @@ const Services = () => {
           <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div className="icon-box">
               <div className="icon">
-                <i className="fas fa-dna"></i>
+                <i className="bi bi-window-stack"></i>
               </div>
               <h4>
-                <a href="">Nemo Enim</a>
+                <a href="">Laboratory Tests</a>
               </h4>
               <p>
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis
+                In center laboratories to check your Pokémon health and needs.
               </p>
             </div>
           </div>
@@ -76,14 +75,13 @@ const Services = () => {
           <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div className="icon-box">
               <div className="icon">
-                <i className="fas fa-wheelchair"></i>
+                <i className="bi bi-speedometer2"></i>
               </div>
               <h4>
-                <a href="">Dele cardo</a>
+                <a href="">Stats Tests</a>
               </h4>
               <p>
-                Quis consequatur saepe eligendi voluptatem consequatur dolor
-                consequuntur
+                For health reasons or for tournaments inscription documentation.
               </p>
             </div>
           </div>
@@ -91,14 +89,14 @@ const Services = () => {
           <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
             <div className="icon-box">
               <div className="icon">
-                <i className="fas fa-notes-medical"></i>
+                <i className="bi bi-box2-heart"></i>
               </div>
               <h4>
-                <a href="">Divera don</a>
+                <a href="">Care Package</a>
               </h4>
               <p>
-                Modi nostrum vel laborum. Porro fugit error sit minus sapiente
-                sit aspernatur
+                For Pokémons who are in condition to keep their medical
+                treatment while traveling.
               </p>
             </div>
           </div>
