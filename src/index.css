@@ -827,8 +827,7 @@ h2::after {
 
 .faq .faq-list {
   padding: 0 100px;
-  margin: auto;
-  width: 80rem;
+  margin: auto;  
 }
 
 .faq .faq-list ul {
@@ -839,7 +838,6 @@ h2::after {
 
 .faq .faq-list li + li {
   margin-top: 15px;
-  background: #fcdbe3;
 }
 
 .faq .faq-list li {
@@ -856,9 +854,9 @@ h2::after {
   display: block;
   position: relative;
   font-family: "Poppins", sans-serif;
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 18px;
   font-weight: 500;
+  line-height: 24px;
   padding: 0 30px;
   outline: none;
   cursor: pointer;
@@ -868,41 +866,23 @@ h2::after {
   font-size: 24px;
   position: absolute;
   left: -10px;
-  bottom: 1px;
   font-size: 25px;
   color: #fa3c69;
 }
 
-.faq .faq-list .icon-show,
-.faq .faq-list .icon-close {
-  font-size: 24px;
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
-.faq .faq-list p {
-  margin-bottom: 0;
-  padding: 10px 0 0 0;
-}
-
-.faq .faq-list .icon-show {
-  display: none;
-}
-
-.faq .faq-list a.collapsed {
+.faq .faq-list button.collapsed {
   color: #343a40;
 }
 
-.faq .faq-list a.collapsed:hover {
-  color: #1977cc;
+.faq .faq-list button.collapsed:hover {
+  color: #fa3c69;
 }
 
-.faq .faq-list a.collapsed .icon-show {
+.faq .faq-list button.collapsed .icon-show {
   display: inline-block;
 }
 
-.faq .faq-list a.collapsed .icon-close {
+.faq .faq-list button.collapsed .icon-close {
   display: none;
 }
 
