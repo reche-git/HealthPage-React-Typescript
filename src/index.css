@@ -268,7 +268,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #2c4964;
+  color: #fa3c69;
 }
 
 .section-title h2::before {
@@ -288,7 +288,7 @@ section {
   display: block;
   width: 40px;
   height: 3px;
-  background: #1977cc;
+  background: #fa3c69;
   bottom: 0;
   left: calc(50% - 20px);
 }
@@ -636,7 +636,7 @@ h2::after {
 # Appointments
 --------------------------------------------------------------*/
 .appointment {
-  background: url("./assets/pokemon-apointment.png") repeat-x,
+  background: url("./assets/pokemon-appointment.png") repeat-x,
     linear-gradient(
       148deg,
       rgba(252, 87, 126, 1) 1%,
@@ -778,12 +778,12 @@ h2::after {
 }
 
 .departments .nav-link:hover {
-  color: #1977cc;
+  color: #fa3c69;
 }
 
 .departments .nav-link.active {
-  color: #1977cc;
-  border-color: #1977cc;
+  color: #fa3c69;
+  border-color: #fa3c69;
 }
 
 .departments .tab-pane.active {
@@ -794,7 +794,7 @@ h2::after {
   font-size: 26px;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #2c4964;
+  color: #fa3c69;
 }
 
 .departments .details p {
@@ -813,108 +813,18 @@ h2::after {
 
   .departments .nav-link.active {
     color: #fff;
-    background: #1977cc;
+    background: #fa3c69;
   }
-}
-
-/*--------------------------------------------------------------
-# Doctors
---------------------------------------------------------------*/
-.doctors {
-  background: #fff;
-}
-
-.doctors .member {
-  position: relative;
-  box-shadow: 0px 2px 15px rgba(44, 73, 100, 0.08);
-  padding: 30px;
-  border-radius: 10px;
-}
-
-.doctors .member .pic {
-  overflow: hidden;
-  width: 180px;
-  border-radius: 50%;
-}
-
-.doctors .member .pic img {
-  transition: ease-in-out 0.3s;
-}
-
-.doctors .member:hover img {
-  transform: scale(1.1);
-}
-
-.doctors .member .member-info {
-  padding-left: 30px;
-}
-
-.doctors .member h4 {
-  font-weight: 700;
-  margin-bottom: 5px;
-  font-size: 20px;
-  color: #2c4964;
-}
-
-.doctors .member span {
-  display: block;
-  font-size: 15px;
-  padding-bottom: 10px;
-  position: relative;
-  font-weight: 500;
-}
-
-.doctors .member span::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 50px;
-  height: 1px;
-  background: #b2c8dd;
-  bottom: 0;
-  left: 0;
-}
-
-.doctors .member p {
-  margin: 10px 0 0 0;
-  font-size: 14px;
-}
-
-.doctors .member .social {
-  margin-top: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-}
-
-.doctors .member .social a {
-  transition: ease-in-out 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50px;
-  width: 32px;
-  height: 32px;
-  background: #a0bcd5;
-}
-
-.doctors .member .social a i {
-  color: #fff;
-  font-size: 16px;
-  margin: 0 2px;
-}
-
-.doctors .member .social a:hover {
-  background: #1977cc;
-}
-
-.doctors .member .social a + a {
-  margin-left: 8px;
 }
 
 /*--------------------------------------------------------------
 # Frequently Asked Questions
 --------------------------------------------------------------*/
+
+.faq {
+  background: #fac1cf;
+}
+
 .faq .faq-list {
   padding: 0 100px;
 }
