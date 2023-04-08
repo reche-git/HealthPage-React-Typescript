@@ -1,5 +1,6 @@
 const Faq = () => {
   return (
+    //PUT TERNARY OPERATOR FOR ICON OPEN OR CLOSED
     <section id="faq" className="faq section-bg">
       <div className="container">
         <div className="accordion-flush faq" id="accordionFlushExample">
