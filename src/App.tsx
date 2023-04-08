@@ -7,6 +7,7 @@ import Counter from "./component/Counter";
 import Services from "./component/Services";
 import ContactForm from "./component/ContactForm";
 import Departments from "./component/Departments";
+import Faq from "./component/Faq";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Services />
       <ContactForm />
       <Departments />
+      <Faq />
     </div>
   );
 }
