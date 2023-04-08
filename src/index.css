@@ -822,30 +822,37 @@ h2::after {
 --------------------------------------------------------------*/
 
 .faq {
-  background: #fac1cf;
+  background: #fcdbe3;
 }
 
 .faq .faq-list {
   padding: 0 100px;
+  margin: auto;
+  width: 80rem;
 }
 
 .faq .faq-list ul {
   padding: 0;
   list-style: none;
+  background: #fcdbe3;
 }
 
 .faq .faq-list li + li {
   margin-top: 15px;
+  background: #fcdbe3;
 }
 
 .faq .faq-list li {
   padding: 20px;
-  background: #fff;
+  background: #ffe1e6;
   border-radius: 4px;
   position: relative;
 }
+.faq .faq-list li .accordion-body {
+  padding-top: 1.5rem;
+}
 
-.faq .faq-list a {
+.faq .faq-list button {
   display: block;
   position: relative;
   font-family: "Poppins", sans-serif;
@@ -860,9 +867,10 @@ h2::after {
 .faq .faq-list .icon-help {
   font-size: 24px;
   position: absolute;
-  right: 0;
-  left: 20px;
-  color: #76b5ee;
+  left: -10px;
+  bottom: 1px;
+  font-size: 25px;
+  color: #fa3c69;
 }
 
 .faq .faq-list .icon-show,

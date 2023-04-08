@@ -10,8 +10,8 @@ const Departments = () => {
         <div className="section-title">
           <h2>Departments</h2>
           <p>
-            here are several departments are found in our centers namely
-            Outpatient department (OPD), Inpatient Service (IP), Medical
+            Here are several of the departments that are found in our centers,
+            namely Outpatient department (OPD), Inpatient Service (IP), Medical
             Department, Nursing Department, Paramedical Department, Physical
             Medicine and Rehabilitation Department, Operation Theatre Complex
             (OT), Pharmacy Department, Radiology Department (X-ray), Dietary
