@@ -20,7 +20,7 @@ interface FormErrors {
   comments?: string;
 }
 
-const validationsForm = (form: Form): FormErrors => {
+const validationsForm = (form: Form) => {
   let errors: FormErrors = {};
   let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
   let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
