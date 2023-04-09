@@ -8,6 +8,7 @@ import Services from "./component/Services";
 import ContactForm from "./component/ContactForm";
 import Departments from "./component/Departments";
 import Faq from "./component/Faq";
+import Contact from "./component/Contact";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
       <ContactForm />
       <Departments />
       <Faq />
+      <Contact />
     </div>
   );
 }
