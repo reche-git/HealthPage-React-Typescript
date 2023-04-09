@@ -1,4 +1,62 @@
+import { useForm } from "../hooks/useForm";
+import { Loader } from "./Loader";
+import Message from "./Message";
+
+interface Form {
+  name: string;
+  email: string;
+  comments: string;
+}
+
+const initialForm: Form = {
+  name: "",
+  email: "",
+  comments: "",
+};
+
+interface FormErrors {
+  name?: string;
+  email?: string;
+  comments?: string;
+}
+
+const validationsForm = (form: Form): FormErrors => {
+  let errors: FormErrors = {};
+  let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+  let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
+  let regexComments = /^.{1,255}$/;
+
+  if (!form.name.trim()) {
+    errors.name = "This subject is requiered.";
+  } else if (!regexName.test(form.name.trim())) {
+    errors.name = "You can only use letters and blank spaces";
+  }
+  if (!form.email.trim()) {
+    errors.email = "This subject is requiered.";
+  } else if (!regexEmail.test(form.email.trim())) {
+    errors.email = 'Try typing an email like "wearevalidating@email.com"';
+  }
+  if (!form.comments.trim()) {
+    errors.comments = "This subject is requiered.";
+  } else if (!regexComments.test(form.comments.trim())) {
+    errors.comments = "You can't exceed the 255 characters";
+  }
+
+  return errors;
+};
+
 const ContactForm = () => {
+  const {
+    form,
+    errors,
+    loading,
+    response,
+    handleBlur,
+    handleSubmit,
+    handleChange,
+  }: any = useForm(initialForm, validationsForm);
+
+
   return (
     <section id="appointment" className="appointment">
       <div className="container">
@@ -12,12 +70,7 @@ const ContactForm = () => {
           </p>
         </div>
 
-        <form
-          //   action="forms/appointment.php"
-          //   method="post"
-          //   role="form"
-          className="email-form"
-        >
+        <form className="email-form" onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-md-4 form-group">
               <input
@@ -26,10 +79,9 @@ const ContactForm = () => {
                 className="form-control"
                 id="name"
                 placeholder="Your Name"
-                data-rule="minlen:4"
-                data-msg="Please enter at least 4 chars"
+                value={form.name}
               />
-              <div className="validate"></div>
+              {errors.name && <p>{errors.name}</p>}
             </div>
             <div className="col-md-4 form-group mt-3 mt-md-0">
               <input
@@ -38,10 +90,12 @@ const ContactForm = () => {
                 name="email"
                 id="email"
                 placeholder="Your Email"
-                data-rule="email"
-                data-msg="Please enter a valid email"
+                value={form.email}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                required
               />
-              <div className="validate"></div>
+              {errors.email && <p>{errors.email}</p>}
             </div>
             <div className="col-md-4 form-group">
               <select name="department" id="department" className="form-select">
@@ -64,18 +118,21 @@ const ContactForm = () => {
                 <option value="Steel">Dark</option>
                 <option value="Steel">Dragon</option>
               </select>
-              <div className="validate"></div>
             </div>
           </div>
 
           <div className="form-group mt-3">
             <textarea
               className="form-control"
-              name="message"
+              name="comments"
               rows={5}
               placeholder="Message"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={form.comments}
+              required
             ></textarea>
-            <div className="validate"></div>
+            {errors.comments && <p>{errors.comments}</p>}
           </div>
           <div className="mb-3">
             <div className="loading">Loading</div>
@@ -88,6 +145,10 @@ const ContactForm = () => {
             <button type="submit">Make an Appointment</button>
           </div>
         </form>
+        {loading && <Loader />}
+        {response && (
+          <Message msg="Form Submited! Check your email" bgColor="#198754" />
+        )}
       </div>
     </section>
   );
