@@ -46,10 +46,10 @@ const Contact = () => {
 
           <div className="col-lg-8 mt-5 mt-lg-0">
             <form
-              action="forms/contact.php"
-              method="post"
-              role="form"
-              className="php-email-form"
+            //   action="forms/contact.php"
+            //   method="post"
+            //   role="form"
+              className="email-form"
             >
               <div className="row">
                 <div className="col-md-6 form-group">
@@ -92,13 +92,7 @@ const Contact = () => {
                   required
                 ></textarea>
               </div>
-              <div className="my-3">
-                <div className="loading">Loading</div>
-                <div className="error-message"></div>
-                <div className="sent-message">
-                  Your message has been sent. Thank you!
-                </div>
-              </div>
+              <br />
               <div className="text-center">
                 <button type="submit">Send Message</button>
               </div>

@@ -21,7 +21,7 @@ export const Header = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
-              <a className="nav-link scrollto active" href="#hero">
+              <a className="nav-link scrollto active" href="#">
                 Home
               </a>
             </li>
@@ -38,11 +38,6 @@ export const Header = () => {
             <li className="nav-item">
               <a className="nav-link scrollto" href="#departments">
                 Departments
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link scrollto" href="#doctors">
-                Doctors
               </a>
             </li>
             <li className="nav-item">

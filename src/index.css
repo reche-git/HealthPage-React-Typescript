@@ -902,11 +902,11 @@ h2::after {
 
 .contact .info i {
   font-size: 20px;
-  color: #1977cc;
+  color: #f8587d;
   float: left;
   width: 44px;
   height: 44px;
-  background: #d6e9fa;
+  background: #ecb9c5;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -919,14 +919,14 @@ h2::after {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #2c4964;
+  color: #d34566;
 }
 
 .contact .info p {
   padding: 0 0 0 60px;
   margin-bottom: 0;
   font-size: 14px;
-  color: #4b7dab;
+  color: #000000;
 }
 
 .contact .info .email,
@@ -937,77 +937,27 @@ h2::after {
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #1977cc;
+  background: #fa3c69;
   color: #fff;
 }
 
-.contact .php-email-form {
-  width: 100%;
-  background: #fff;
-}
-
-.contact .php-email-form .form-group {
-  padding-bottom: 8px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .error-message br + br {
-  margin-top: 25px;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.contact .php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  animation: animate-loading 1s linear infinite;
-}
-
-.contact .php-email-form input,
-.contact .php-email-form textarea {
+.contact .email-form input,
+.contact .email-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
 }
 
-.contact .php-email-form input {
+.contact .email-form input {
   height: 44px;
 }
 
-.contact .php-email-form textarea {
+.contact .email-form textarea {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type="submit"] {
-  background: #1977cc;
+.contact .email-form button[type="submit"] {
+  background: #f8587d;
   border: 0;
   padding: 10px 35px;
   color: #fff;
@@ -1015,8 +965,8 @@ h2::after {
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type="submit"]:hover {
-  background: #1c84e3;
+.contact .email-form button[type="submit"]:hover {
+  background: #fa3c69;
 }
 
 @keyframes animate-loading {
@@ -1033,9 +983,8 @@ h2::after {
 # Footer
 --------------------------------------------------------------*/
 #footer {
-  color: #444444;
   font-size: 14px;
-  background: #f1f7fd;
+  background: rgb(255, 124, 155);
 }
 
 #footer .footer-top {
@@ -1084,7 +1033,7 @@ h2::after {
 
 #footer .footer-top .footer-links ul i {
   padding-right: 2px;
-  color: #1c84e3;
+  color: #fa3c69;
   font-size: 18px;
   line-height: 1;
 }
@@ -1108,7 +1057,7 @@ h2::after {
 
 #footer .footer-top .footer-links ul a:hover {
   text-decoration: none;
-  color: #1977cc;
+  color: #fa3c69;
 }
 
 #footer .footer-newsletter {
@@ -1148,14 +1097,14 @@ h2::after {
   background: none;
   font-size: 16px;
   padding: 0 20px;
-  background: #1977cc;
+  background: #f8587d;
   color: #fff;
   transition: 0.3s;
   border-radius: 50px;
 }
 
 #footer .footer-newsletter form input[type="submit"]:hover {
-  background: #1c84e3;
+  background: #fa3c69;
 }
 
 #footer .credits {
@@ -1167,8 +1116,8 @@ h2::after {
 #footer .social-links a {
   font-size: 18px;
   display: inline-block;
-  background: #1977cc;
-  color: #fff;
+  background: #ecb9c5;
+  color: #fa3c69;
   line-height: 1;
   padding: 8px 0;
   margin-right: 4px;
@@ -1180,7 +1129,7 @@ h2::after {
 }
 
 #footer .social-links a:hover {
-  background: #1c84e3;
+  background: #fa3c69;
   color: #fff;
   text-decoration: none;
 }

@@ -9,6 +9,7 @@ import ContactForm from "./component/ContactForm";
 import Departments from "./component/Departments";
 import Faq from "./component/Faq";
 import Contact from "./component/Contact";
+import Footer from "./component/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
       <Departments />
       <Faq />
       <Contact />
+      <Footer />
     </div>
   );
 }
