@@ -48,8 +48,8 @@ const Footer = () => {
 
             <div className="col-lg-4 col-md-6 footer-newsletter">
               <h4>Join Our Newsletter</h4>
-              <p>Receive all the last news about PokeCare!</p>
-              <form action="" method="post">
+              <p>Receive all the latest news about PokeCare!</p>
+              <form>
                 <input type="email" name="email" />
                 <input type="submit" value="Subscribe" />
               </form>
