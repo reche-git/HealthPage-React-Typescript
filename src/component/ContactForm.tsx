@@ -20,7 +20,7 @@ interface FormErrors {
   comments?: string;
 }
 
-const validationsForm = (form: Form) => {
+const validationsForm = (form: Form): FormErrors => {
   let errors: FormErrors = {};
   let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
   let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
@@ -48,14 +48,13 @@ const validationsForm = (form: Form) => {
 const ContactForm = () => {
   const {
     form,
-    errors,
+    // errors,
     loading,
     response,
     handleBlur,
     handleSubmit,
     handleChange,
-  }: any = useForm(initialForm, validationsForm);
-
+  } = useForm(initialForm, validationsForm);
 
   return (
     <section id="appointment" className="appointment">
@@ -79,9 +78,12 @@ const ContactForm = () => {
                 className="form-control"
                 id="name"
                 placeholder="Your Name"
+                onChange={handleChange}
+                onBlur={handleBlur}
                 value={form.name}
+                required
               />
-              {errors.name && <p>{errors.name}</p>}
+              {/* {errors.name && <p>{errors.name}</p>} */}
             </div>
             <div className="col-md-4 form-group mt-3 mt-md-0">
               <input
@@ -90,12 +92,12 @@ const ContactForm = () => {
                 name="email"
                 id="email"
                 placeholder="Your Email"
-                value={form.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
+                value={form.email}
                 required
               />
-              {errors.email && <p>{errors.email}</p>}
+              {/* {errors.email && <p>{errors.email}</p>} */}
             </div>
             <div className="col-md-4 form-group">
               <select name="department" id="department" className="form-select">
@@ -132,17 +134,10 @@ const ContactForm = () => {
               value={form.comments}
               required
             ></textarea>
-            {errors.comments && <p>{errors.comments}</p>}
-          </div>
-          <div className="mb-3">
-            <div className="loading">Loading</div>
-            <div className="error-message"></div>
-            <div className="sent-message">
-              Your appointment request has been sent successfully. Thank you!
-            </div>
+            {/* {errors.comments && <p>{errors.comments}</p>} */}
           </div>
           <div className="text-center">
-            <button type="submit">Make an Appointment</button>
+            <input type="submit" value="Send"></input>
           </div>
         </form>
         {loading && <Loader />}

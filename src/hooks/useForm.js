@@ -23,6 +23,7 @@ export const useForm = (initialForm, validateForm) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("banana")
     setErrors(validateForm(form));
 
     if (Object.keys(errors).length === 0) {

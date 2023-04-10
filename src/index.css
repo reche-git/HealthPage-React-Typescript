@@ -956,7 +956,7 @@ h2::after {
   padding: 10px 12px;
 }
 
-.contact .email-form button[type="submit"] {
+.contact .email-form input[type="submit"] {
   background: #f8587d;
   border: 0;
   padding: 10px 35px;
@@ -965,7 +965,7 @@ h2::after {
   border-radius: 50px;
 }
 
-.contact .email-form button[type="submit"]:hover {
+.contact .email-form input[type="submit"]:hover {
   background: #fa3c69;
 }
 
