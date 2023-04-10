@@ -48,13 +48,13 @@ const validationsForm = (form: Form): FormErrors => {
 const ContactForm = () => {
   const {
     form,
-    // errors,
+    errors,
     loading,
     response,
     handleBlur,
     handleSubmit,
     handleChange,
-  } = useForm(initialForm, validationsForm);
+  }: any = useForm(initialForm, validationsForm);
 
   return (
     <section id="appointment" className="appointment">
@@ -83,7 +83,7 @@ const ContactForm = () => {
                 value={form.name}
                 required
               />
-              {/* {errors.name && <p>{errors.name}</p>} */}
+              {errors.name && <p>{errors.name}</p>}
             </div>
             <div className="col-md-4 form-group mt-3 mt-md-0">
               <input
@@ -97,9 +97,9 @@ const ContactForm = () => {
                 value={form.email}
                 required
               />
-              {/* {errors.email && <p>{errors.email}</p>} */}
+              {errors.email && <p>{errors.email}</p>}
             </div>
-            <div className="col-md-4 form-group">
+            {/* <div className="col-md-4 form-group">
               <select name="department" id="department" className="form-select">
                 <option value="">Pokémon Type</option>
                 <option value="Normal">Normal</option>
@@ -120,7 +120,7 @@ const ContactForm = () => {
                 <option value="Steel">Dark</option>
                 <option value="Steel">Dragon</option>
               </select>
-            </div>
+            </div> */}
           </div>
 
           <div className="form-group mt-3">
@@ -134,10 +134,10 @@ const ContactForm = () => {
               value={form.comments}
               required
             ></textarea>
-            {/* {errors.comments && <p>{errors.comments}</p>} */}
+            {errors.comments && <p>{errors.comments}</p>}
           </div>
           <div className="text-center">
-            <input type="submit" value="Send"></input>
+            <button type="submit" value="Send"></button>
           </div>
         </form>
         {loading && <Loader />}
