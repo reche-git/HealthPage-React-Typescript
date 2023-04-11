@@ -99,7 +99,7 @@ const ContactForm = () => {
               />
               {errors.email && <p>{errors.email}</p>}
             </div>
-            {/* <div className="col-md-4 form-group">
+            <div className="col-md-4 form-group">
               <select name="department" id="department" className="form-select">
                 <option value="">Pokémon Type</option>
                 <option value="Normal">Normal</option>
@@ -120,7 +120,7 @@ const ContactForm = () => {
                 <option value="Steel">Dark</option>
                 <option value="Steel">Dragon</option>
               </select>
-            </div> */}
+            </div>
           </div>
 
           <div className="form-group mt-3">
@@ -137,7 +137,7 @@ const ContactForm = () => {
             {errors.comments && <p>{errors.comments}</p>}
           </div>
           <div className="text-center">
-            <button type="submit" value="Send"></button>
+            <button type="submit">Make an Appointment</button>{" "}
           </div>
         </form>
         {loading && <Loader />}
