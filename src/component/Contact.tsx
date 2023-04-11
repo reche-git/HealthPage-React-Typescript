@@ -5,18 +5,21 @@ import Message from "./Message";
 interface Form {
   name: string;
   email: string;
+  subject: string;
   comments: string;
 }
 
 const initialForm: Form = {
   name: "",
   email: "",
+  subject: "",
   comments: "",
 };
 
 interface FormErrors {
   name?: string;
   email?: string;
+  subject?: string;
   comments?: string;
 }
 
@@ -35,6 +38,9 @@ const validationsForm = (form: Form): FormErrors => {
     errors.email = "The email is requiered.";
   } else if (!regexEmail.test(form.email.trim())) {
     errors.email = 'Try typing an email like "email@email.com"';
+  }
+  if (!form.subject.trim()) {
+    errors.subject = "This subject is requiered.";
   }
   if (!form.comments.trim()) {
     errors.comments = "Message is requiered.";
@@ -70,7 +76,7 @@ const Contact = () => {
 
       <div>
         <iframe
-        title="map"
+          title="map"
           src="https://my.atlistmaps.com/map/3175cf26-e694-447b-8b77-6e826f3083f3?share=true"
           allow="geolocation 'self' https://my.atlistmaps.com"
           width="100%"
@@ -117,6 +123,7 @@ const Contact = () => {
                     value={form.name}
                     required
                   />
+                  {errors.name && <p className="form-error">*{errors.name}</p>}
                 </div>
                 <div className="col-md-6 form-group mt-3 mt-md-0">
                   <input
@@ -130,6 +137,9 @@ const Contact = () => {
                     value={form.email}
                     required
                   />
+                  {errors.email && (
+                    <p className="form-error">*{errors.email}</p>
+                  )}
                 </div>
               </div>
               <div className="form-group mt-3">
@@ -144,6 +154,9 @@ const Contact = () => {
                   value={form.subject}
                   required
                 />
+                {errors.subject && (
+                  <p className="form-error">{errors.subject}</p>
+                )}
               </div>
               <div className="form-group mt-3">
                 <textarea
@@ -156,21 +169,27 @@ const Contact = () => {
                   value={form.comments}
                   required
                 ></textarea>
+                {errors.comments && (
+                  <p className="form-error">*{errors.comments}</p>
+                )}
               </div>
               <br />
               <div className="text-center">
                 <button type="submit">Send Message</button>
               </div>
               <br />
-              {errors.name && <p className="form-error">*{errors.name}</p>}
-              {errors.email && <p className="form-error">*{errors.email}</p>}
-              {errors.comments && (
+              {/* {errors.name && <p className="form-error">*{errors.name}</p>} */}
+              {/* {errors.email && <p className="form-error">*{errors.email}</p>} */}
+              {/* {errors.comments && (
                 <p className="form-error">*{errors.comments}</p>
-              )}
+              )} */}
             </form>
             {loading && <Loader />}
             {response && (
-              <Message msg="Form Submited! Check your email" bgColor="#fa3c69" />
+              <Message
+                msg="Form Submited! Check your email"
+                bgColor="#fa3c69"
+              />
             )}
           </div>
         </div>
