@@ -1,4 +1,61 @@
+import { useForm } from "../hooks/useForm";
+import { Loader } from "./Loader";
+import Message from "./Message";
+
+interface Form {
+  name: string;
+  email: string;
+  comments: string;
+}
+
+const initialForm: Form = {
+  name: "",
+  email: "",
+  comments: "",
+};
+
+interface FormErrors {
+  name?: string;
+  email?: string;
+  comments?: string;
+}
+
+const validationsForm = (form: Form): FormErrors => {
+  let errors: FormErrors = {};
+  let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+  let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/;
+  let regexComments = /^.{1,255}$/;
+
+  if (!form.name.trim()) {
+    errors.name = "The name is requiered.";
+  } else if (!regexName.test(form.name.trim())) {
+    errors.name = "You can only use letters and blank spaces";
+  }
+  if (!form.email.trim()) {
+    errors.email = "The email is requiered.";
+  } else if (!regexEmail.test(form.email.trim())) {
+    errors.email = 'Try typing an email like "email@email.com"';
+  }
+  if (!form.comments.trim()) {
+    errors.comments = "Message is requiered.";
+  } else if (!regexComments.test(form.comments.trim())) {
+    errors.comments = "You can't exceed the 255 characters";
+  }
+
+  return errors;
+};
+
 const Contact = () => {
+  const {
+    form,
+    errors,
+    loading,
+    response,
+    handleBlur,
+    handleSubmit,
+    handleChange,
+  }: any = useForm(initialForm, validationsForm);
+
   return (
     <section id="contact" className="contact">
       <div className="container">
@@ -13,6 +70,7 @@ const Contact = () => {
 
       <div>
         <iframe
+        title="map"
           src="https://my.atlistmaps.com/map/3175cf26-e694-447b-8b77-6e826f3083f3?share=true"
           allow="geolocation 'self' https://my.atlistmaps.com"
           width="100%"
@@ -45,12 +103,7 @@ const Contact = () => {
           </div>
 
           <div className="col-lg-8 mt-5 mt-lg-0">
-            <form
-            //   action="forms/contact.php"
-            //   method="post"
-            //   role="form"
-              className="email-form"
-            >
+            <form className="email-form" onSubmit={handleSubmit}>
               <div className="row">
                 <div className="col-md-6 form-group">
                   <input
@@ -59,6 +112,9 @@ const Contact = () => {
                     className="form-control"
                     id="name"
                     placeholder="Your Name"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={form.name}
                     required
                   />
                 </div>
@@ -69,6 +125,9 @@ const Contact = () => {
                     name="email"
                     id="email"
                     placeholder="Your Email"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={form.email}
                     required
                   />
                 </div>
@@ -80,15 +139,21 @@ const Contact = () => {
                   name="subject"
                   id="subject"
                   placeholder="Subject"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={form.subject}
                   required
                 />
               </div>
               <div className="form-group mt-3">
                 <textarea
                   className="form-control"
-                  name="message"
+                  name="comments"
                   rows={5}
                   placeholder="Message"
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={form.comments}
                   required
                 ></textarea>
               </div>
@@ -96,7 +161,17 @@ const Contact = () => {
               <div className="text-center">
                 <button type="submit">Send Message</button>
               </div>
+              <br />
+              {errors.name && <p className="form-error">*{errors.name}</p>}
+              {errors.email && <p className="form-error">*{errors.email}</p>}
+              {errors.comments && (
+                <p className="form-error">*{errors.comments}</p>
+              )}
             </form>
+            {loading && <Loader />}
+            {response && (
+              <Message msg="Form Submited! Check your email" bgColor="#fa3c69" />
+            )}
           </div>
         </div>
       </div>

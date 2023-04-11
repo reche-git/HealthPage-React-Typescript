@@ -975,6 +975,12 @@ h2::after {
   background: #fa3c69;
 }
 
+.contact .form-error {
+  color: #ff0000;
+  font-weight: 500;
+  margin: auto;
+}
+
 @keyframes animate-loading {
   0% {
     transform: rotate(0deg);
