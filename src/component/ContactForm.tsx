@@ -27,17 +27,17 @@ const validationsForm = (form: Form): FormErrors => {
   let regexComments = /^.{1,255}$/;
 
   if (!form.name.trim()) {
-    errors.name = "This subject is requiered.";
+    errors.name = "The name is requiered.";
   } else if (!regexName.test(form.name.trim())) {
     errors.name = "You can only use letters and blank spaces";
   }
   if (!form.email.trim()) {
-    errors.email = "This subject is requiered.";
+    errors.email = "The email is requiered.";
   } else if (!regexEmail.test(form.email.trim())) {
-    errors.email = 'Try typing an email like "wearevalidating@email.com"';
+    errors.email = 'Try typing an email like "email@email.com"';
   }
   if (!form.comments.trim()) {
-    errors.comments = "This subject is requiered.";
+    errors.comments = "Message is requiered.";
   } else if (!regexComments.test(form.comments.trim())) {
     errors.comments = "You can't exceed the 255 characters";
   }
@@ -83,7 +83,7 @@ const ContactForm = () => {
                 value={form.name}
                 required
               />
-              {errors.name && <p>{errors.name}</p>}
+             
             </div>
             <div className="col-md-4 form-group mt-3 mt-md-0">
               <input
@@ -97,7 +97,7 @@ const ContactForm = () => {
                 value={form.email}
                 required
               />
-              {errors.email && <p>{errors.email}</p>}
+              
             </div>
             <div className="col-md-4 form-group">
               <select name="department" id="department" className="form-select">
@@ -134,15 +134,18 @@ const ContactForm = () => {
               value={form.comments}
               required
             ></textarea>
-            {errors.comments && <p>{errors.comments}</p>}
           </div>
           <div className="text-center">
             <button type="submit">Make an Appointment</button>{" "}
           </div>
+          <br />
+            {errors.name && <p className="form-error">*{errors.name}</p>}
+            {errors.email && <p className="form-error">*{errors.email}</p>}
+            {errors.comments && <p className="form-error">*{errors.comments}</p>}
         </form>
         {loading && <Loader />}
         {response && (
-          <Message msg="Form Submited! Check your email" bgColor="#198754" />
+          <Message msg="Form Submited! Check your email" bgColor="#fff" />
         )}
       </div>
     </section>

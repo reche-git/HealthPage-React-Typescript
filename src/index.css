@@ -714,7 +714,7 @@ h2::after {
 .appointment .email-form input:focus,
 .appointment .email-form textarea:focus,
 .appointment .email-form select:focus {
-  border-color: #ff0000;
+  border-color: #f8587d;
 }
 
 .appointment .email-form input,
@@ -737,6 +737,12 @@ h2::after {
 
 .appointment .email-form button[type="submit"]:hover {
   background: #fa3c69;
+}
+
+.appointment .form-error {
+  color: #ff0000;
+  font-weight: 500;
+  margin: auto;
 }
 
 .appointment .section-title h2,

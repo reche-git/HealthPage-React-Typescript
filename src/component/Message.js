@@ -3,9 +3,8 @@ export const Message = ({msg, bgColor}) => {
         padding: "1rem",
         marginBottom: "1rem",
         textAlign: "center",
-        color:"#fff",
+        color: bgColor,
         fontWeight: "bold",
-        backgroundColor: bgColor,
     };
   return (
     <div style={styles}>
