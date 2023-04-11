@@ -178,11 +178,6 @@ const Contact = () => {
                 <button type="submit">Send Message</button>
               </div>
               <br />
-              {/* {errors.name && <p className="form-error">*{errors.name}</p>} */}
-              {/* {errors.email && <p className="form-error">*{errors.email}</p>} */}
-              {/* {errors.comments && (
-                <p className="form-error">*{errors.comments}</p>
-              )} */}
             </form>
             {loading && <Loader />}
             {response && (
