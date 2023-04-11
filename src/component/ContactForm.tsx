@@ -83,7 +83,6 @@ const ContactForm = () => {
                 value={form.name}
                 required
               />
-             
             </div>
             <div className="col-md-4 form-group mt-3 mt-md-0">
               <input
@@ -97,7 +96,6 @@ const ContactForm = () => {
                 value={form.email}
                 required
               />
-              
             </div>
             <div className="col-md-4 form-group">
               <select name="department" id="department" className="form-select">
@@ -139,9 +137,9 @@ const ContactForm = () => {
             <button type="submit">Make an Appointment</button>{" "}
           </div>
           <br />
-            {errors.name && <p className="form-error">*{errors.name}</p>}
-            {errors.email && <p className="form-error">*{errors.email}</p>}
-            {errors.comments && <p className="form-error">*{errors.comments}</p>}
+          {errors.name && <p className="form-error">*{errors.name}</p>}
+          {errors.email && <p className="form-error">*{errors.email}</p>}
+          {errors.comments && <p className="form-error">*{errors.comments}</p>}
         </form>
         {loading && <Loader />}
         {response && (
