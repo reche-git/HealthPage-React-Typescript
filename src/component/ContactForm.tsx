@@ -72,6 +72,7 @@ const ContactForm = () => {
         <form className="email-form" onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-md-4 form-group">
+
               <input
                 type="text"
                 name="name"
@@ -83,6 +84,8 @@ const ContactForm = () => {
                 value={form.name}
                 required
               />
+              {errors.name && <p className="form-error">*{errors.name}</p>}
+
             </div>
             <div className="col-md-4 form-group mt-3 mt-md-0">
               <input
@@ -96,6 +99,8 @@ const ContactForm = () => {
                 value={form.email}
                 required
               />
+          {errors.email && <p className="form-error">*{errors.email}</p>}
+
             </div>
             <div className="col-md-4 form-group">
               <select name="department" id="department" className="form-select">
@@ -133,13 +138,12 @@ const ContactForm = () => {
               required
             ></textarea>
           </div>
+          {errors.comments && <p className="form-error">*{errors.comments}</p>}
+
           <div className="text-center">
             <button type="submit">Make an Appointment</button>{" "}
           </div>
           <br />
-          {errors.name && <p className="form-error">*{errors.name}</p>}
-          {errors.email && <p className="form-error">*{errors.email}</p>}
-          {errors.comments && <p className="form-error">*{errors.comments}</p>}
         </form>
         {loading && <Loader />}
         {response && (
