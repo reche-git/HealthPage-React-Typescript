@@ -144,8 +144,8 @@ const ContactForm = () => {
             <button type="submit">Make an Appointment</button>{" "}
           </div>
           <br />
-        </form>
         {loading && <Loader />}
+        </form>
         {response && (
           <Message msg="Form Submited! Check your email" bgColor="#fff" />
         )}
